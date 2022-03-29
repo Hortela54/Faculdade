@@ -20,8 +20,8 @@ def consultarPeca():
         
         if res == 1:
             for e in pecas:
-                for i,j in e.items():
-                    print(i,j)
+                for a,b,c,d in e.items():
+                    print(a,b,c,d)
         elif res == 2:
             print('Código')
             break

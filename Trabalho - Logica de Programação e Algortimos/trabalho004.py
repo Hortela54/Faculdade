@@ -44,7 +44,7 @@ def menuPrincipal():
 
         if res == 1:
             codigo += 1
-            cadastrarPeca(codigo)
+            print(cadastrarPeca(codigo))
         elif res == 2:
             consultarPeca()
         elif res == 3:

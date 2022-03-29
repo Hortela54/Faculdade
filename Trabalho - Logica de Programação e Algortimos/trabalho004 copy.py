@@ -52,7 +52,17 @@ def consultarPeca():
         elif res == 4:
             break
         
-#def removerPeca()
+def removerPeca():
+    cod = int(input('Digite o codigo para fazer a procura: '))
+    values = len(pecas['cod'])
+    for i, valor in enumerate(pecas['cod']): #Iterando sobre os valores da lista e seus indices 
+        if valor == cod:               
+            print('Codigo {}'.format(pecas['cod'][i]))
+            print('Nome {}'.format(pecas['nome'][i]))
+            print('Fabricante {}'.format(pecas['fabricante'][i]))
+            print('Valor {}'.format(pecas['valor'][i]))
+            print('')
+
 
 def menuPrincipal():
     print('Bem vindo ao Controle de Estoque de Bike Shop do Samuel Nilton da Silva(3892265)')

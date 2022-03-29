@@ -19,18 +19,47 @@ def consultarPeca():
         res = int(input('Escolho a opção: '))
         
         if res == 1:
-            for e in pecas:
-                for a,b,c,d in e.items():
-                    print(a,b,c,d)
+            values = len(pecas['cod']) #Retorna a quantidade de itens dentro, usando o cod como referencia para saber quantas peças existem dentro da lista
+            for i in range(0, values): #Varrendo a lista pela quantidade de valores dentro da lista
+               print('Codigo {}'.format(pecas['cod'][i]))
+               print('Nome {}'.format(pecas['nome'][i]))
+               print('Fabricante {}'.format(pecas['fabricante'][i]))
+               print('Valor {}'.format(pecas['valor'][i]))
+               print('')
         elif res == 2:
-            print('Código')
-            break
+            cod = int(input('Digite o codigo para fazer a procura: '))
+            values = len(pecas['cod'])
+            for i, valor in enumerate(pecas['cod']): #Iterando sobre os valores da lista e seus indices 
+                if valor == cod:               
+                    print('Codigo {}'.format(pecas['cod'][i]))
+                    print('Nome {}'.format(pecas['nome'][i]))
+                    print('Fabricante {}'.format(pecas['fabricante'][i]))
+                    print('Valor {}'.format(pecas['valor'][i]))
+                    print('')
         elif res == 3:
-            print('Fabricante')
+            fabric = input('Digite o fabricante para fazer a procura: ')
+            for i, valor in enumerate(pecas['fabricante']):
+                if valor == fabric:               
+                    print('Codigo {}'.format(pecas['cod'][i]))
+                    print('Nome {}'.format(pecas['nome'][i]))
+                    print('Fabricante {}'.format(pecas['fabricante'][i]))
+                    print('Valor {}'.format(pecas['valor'][i]))
+                    print('')
+            
         elif res == 4:
             break
         
-#def removerPeca()
+def removerPeca():
+    cod = int(input('Digite o codigo para fazer a procura: '))
+    values = len(pecas['cod'])
+    for i, valor in enumerate(pecas['cod']): #Iterando sobre os valores da lista e seus indices 
+        if valor == cod:               
+            print('Codigo {}'.format(pecas['cod'][i]))
+            print('Nome {}'.format(pecas['nome'][i]))
+            print('Fabricante {}'.format(pecas['fabricante'][i]))
+            print('Valor {}'.format(pecas['valor'][i]))
+            print('')
+
 
 def menuPrincipal():
     print('Bem vindo ao Controle de Estoque de Bike Shop do Samuel Nilton da Silva(3892265)')

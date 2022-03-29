@@ -1,4 +1,4 @@
-pecas = {'cod':[],'nome':[],'fabricante':[], 'valor':[]}
+pecas = {'cod':[],'nome':[],'fabricante':[], 'valor':[]} # Criando o dicionario e listas com escopo global para savar os cadastros
 def cadastrarPeca(cod): 
     print('Código da peça: {}'.format(cod))
     nomePeca = input('Digite o nome da peça ') 
@@ -44,8 +44,7 @@ def consultarPeca():
                     print('Nome {}'.format(pecas['nome'][i]))
                     print('Fabricante {}'.format(pecas['fabricante'][i]))
                     print('Valor {}'.format(pecas['valor'][i]))
-                    print('')
-            
+                    print('')           
         elif res == 4:
             break
         
@@ -78,7 +77,7 @@ def menuPrincipal():
             removerPeca()
         elif res == 4:
             break
-    
+
 def iniciar(): 
     menuPrincipal()
 

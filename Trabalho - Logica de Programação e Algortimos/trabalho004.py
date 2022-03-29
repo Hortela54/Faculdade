@@ -11,15 +11,32 @@ def cadastrarPeca(cod):
         return pecas
         break
 
-#def consultarPeca():
-
-#def consultarPeca():
+def consultarPeca():
+    while True:
+        print('1 - Consultar todas as peças ')
+        print('2 - Consultar peças por Codigo')
+        print('3 - Consultar peças por fabricante ')
+        print('4 - Retornar ')
+        res = int(input('Escolho a opção: '))
+        
+        if res == 1:
+            print('Todas')
+            break
+        elif res == 2:
+            print('Código')
+            break
+        elif res == 3:
+            print('Fabricante')
+        elif res == 4:
+            break
+        
 
 #def removerPeca()
 
 def menuPrincipal():
     print('Bem vindo ao Controle de Estoque de Bike Shop do Samuel Nilton da Silva(3892265)')
     codigo = 0 
+    pecas = []
     while True:
         print('1 - Cadastrar peças ')
         print('2 - Consultar peças ')
@@ -29,15 +46,15 @@ def menuPrincipal():
 
         if res == 1:
             codigo += 1
-            pecas = cadastrarPeca(codigo)
+            pecas.append(cadastrarPeca(codigo))
+            print(pecas)
         elif res == 2:
-            print('2')
+            consultarPeca()
         elif res == 3:
             print('3')
         elif res == 4:
             break
     
-
 def iniciar(): 
     menuPrincipal()
 

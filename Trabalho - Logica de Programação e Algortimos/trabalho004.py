@@ -3,8 +3,7 @@ def cadastrarPeca(cod):
     print('Código da peça: {}'.format(cod))
     nomePeca = input('Digite o nome da peça ') 
     fabricantePeca = input('Digite o nome do fabricante da peça ')
-    valorPeca = int(input('Digite o valor da peça '))
-    
+    valorPeca = input('Digite o valor da peça ')   
     pecas['cod'].append(cod)
     pecas['nome'].append(nomePeca)
     pecas['fabricante'].append(fabricantePeca)
@@ -20,7 +19,9 @@ def consultarPeca():
         res = int(input('Escolho a opção: '))
         
         if res == 1:
-            break
+            for e in pecas:
+                for i,j in e.items():
+                    print(i,j)
         elif res == 2:
             print('Código')
             break
@@ -42,8 +43,8 @@ def menuPrincipal():
         res = int(input('Escolho a opção: '))
 
         if res == 1:
-            codigo += 1                
-            print(cadastrarPeca(codigo))
+            codigo += 1
+            cadastrarPeca(codigo)
         elif res == 2:
             consultarPeca()
         elif res == 3:

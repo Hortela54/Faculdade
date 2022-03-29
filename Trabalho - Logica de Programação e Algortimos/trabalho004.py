@@ -30,7 +30,7 @@ def consultarPeca():
             cod = int(input('Digite o codigo para fazer a procura: '))
             values = len(pecas['cod'])
             for i, valor in enumerate(pecas['cod']): #Iterando sobre os valores da lista e seus indices, se orientando pela chave 'cod'
-                if valor == cod:               
+                if valor == cod: # Se o valor do codigo existente for o mesmo que o valor que o usuario digitou                
                     print('Codigo {}'.format(pecas['cod'][i]))
                     print('Nome {}'.format(pecas['nome'][i]))
                     print('Fabricante {}'.format(pecas['fabricante'][i]))

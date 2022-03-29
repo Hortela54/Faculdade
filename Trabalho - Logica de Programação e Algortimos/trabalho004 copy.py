@@ -1,14 +1,15 @@
+pecas = {'cod':[],'nome':[],'fabricante':[], 'valor':[]}
 def cadastrarPeca(cod): 
     print('Código da peça: {}'.format(cod))
-    pecas = {'cod':[cod],'nome':[],'fabricante':[], 'valor':[]}
-    while True:
-        nomePeca = input('Digite o nome da peça ') 
-        fabricantePeca = input('Digite o nome do fabricante da peça ')
-        valorPeca = int(input('Digite o valor da peça '))
-        pecas['nome'].append(nomePeca)
-        pecas['fabricante'].append(fabricantePeca)
-        pecas['valor'].append(valorPeca)
-        return pecas
+    nomePeca = input('Digite o nome da peça ') 
+    fabricantePeca = input('Digite o nome do fabricante da peça ')
+    valorPeca = int(input('Digite o valor da peça '))
+    
+    pecas['cod'].append(cod)
+    pecas['nome'].append(nomePeca)
+    pecas['fabricante'].append(fabricantePeca)
+    pecas['valor'].append(valorPeca)
+    return pecas
 
 def consultarPeca():
     while True:
@@ -19,7 +20,6 @@ def consultarPeca():
         res = int(input('Escolho a opção: '))
         
         if res == 1:
-
             break
         elif res == 2:
             print('Código')
@@ -34,7 +34,6 @@ def consultarPeca():
 def menuPrincipal():
     print('Bem vindo ao Controle de Estoque de Bike Shop do Samuel Nilton da Silva(3892265)')
     codigo = 0 
-    pecas = []
     while True:
         print('1 - Cadastrar peças ')
         print('2 - Consultar peças ')
@@ -43,9 +42,8 @@ def menuPrincipal():
         res = int(input('Escolho a opção: '))
 
         if res == 1:
-            codigo += 1
-            pecas.append(cadastrarPeca(codigo))
-            print(pecas)
+            codigo += 1                
+            print(cadastrarPeca(codigo))
         elif res == 2:
             consultarPeca()
         elif res == 3:

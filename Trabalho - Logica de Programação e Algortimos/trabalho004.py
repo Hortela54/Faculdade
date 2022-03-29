@@ -54,12 +54,10 @@ def removerPeca():
     values = len(pecas['cod'])
     for i, valor in enumerate(pecas['cod']): #Iterando sobre os valores da lista e seus indices 
         if valor == cod:               
-            print('Codigo {}'.format(pecas['cod'][i]))
-            print('Nome {}'.format(pecas['nome'][i]))
-            print('Fabricante {}'.format(pecas['fabricante'][i]))
-            print('Valor {}'.format(pecas['valor'][i]))
-            print('')
-
+            del(pecas['cod'][i])
+            del(pecas['nome'][i])
+            del(pecas['fabricante'][i])
+            del(pecas['valor'][i])
 
 def menuPrincipal():
     print('Bem vindo ao Controle de Estoque de Bike Shop do Samuel Nilton da Silva(3892265)')
@@ -73,11 +71,11 @@ def menuPrincipal():
 
         if res == 1:
             codigo += 1
-            print(cadastrarPeca(codigo))
+            cadastrarPeca(codigo)
         elif res == 2:
             consultarPeca()
         elif res == 3:
-            print('3')
+            removerPeca()
         elif res == 4:
             break
     

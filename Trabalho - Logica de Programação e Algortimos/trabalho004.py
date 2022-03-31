@@ -49,10 +49,10 @@ def consultarPeca():
             break
         
 def removerPeca():
-    cod = int(input('Digite o codigo para fazer a procura: '))
+    cod3892265 = int(input('Digite o codigo da peça para fazer a remoção: '))
     values = len(pecas['cod'])
     for i, valor in enumerate(pecas['cod']): #Iterando sobre os valores da lista e seus indices 
-        if valor == cod:               
+        if valor == cod3892265:               
             del(pecas['cod'][i]) #Deletar os registro sendo orientado pelas chaves
             del(pecas['nome'][i])
             del(pecas['fabricante'][i])

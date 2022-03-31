@@ -44,38 +44,43 @@ def pesoObjeto():
             elif pesoObjeto >= 10 and pesoObjeto < 30:
                 peso = 3   
             elif pesoObjeto > 30:
-                print('Não aceito')
+                print('Não aceito, objeto muito pesado')
                 continue
             break
     return peso
 
 def rotaObjeto():
-    print('+--------------------------------------+') #Menu de escolha apresentado ao usuario
-    print('|RS - De Rio de Janeiro até São Paulo  |')
-    print('| SR - De São Paulo até Rio de Janeiro |')    
-    print('| BR - De Brasília até Rio de Janeiro  |') 
-    print('|   RB - Rio de Janeiro até Brasília   |') 
-    print('|    SB - De São Paulo até Brasília    |')  
-    print('+--------------------------------------+') 
-    rotaObjeto = input('Digite a sigla da rota desejada: ') #Capta a escolha do usuario
-    if rotaObjeto == 'RS' or rotaObjeto == 'rs': #Sequencia de possibilidades de escrita do usuario
-        rota = 1
-        return rota
-    elif rotaObjeto == 'SR' or rotaObjeto == 'sr':
-        rota = 1
-        return rota
-    elif rotaObjeto == 'BS' or rotaObjeto == 'bs':
-        rota = 1.2
-        return rota
-    elif rotaObjeto == 'RB' or rotaObjeto == 'rb':
-        rota = 1.5
-        return rota
-    elif rotaObjeto == 'BR' or rotaObjeto == 'br':
-        rota = 1.5
-        return rota
-    elif rotaObjeto == 'SB' or rotaObjeto == 'sb':
-        rota = 1.2
-        return rota
+    while True:
+        print('+--------------------------------------+') #Menu de escolha apresentado ao usuario
+        print('|RS - De Rio de Janeiro até São Paulo  |')
+        print('| SR - De São Paulo até Rio de Janeiro |')    
+        print('| BR - De Brasília até Rio de Janeiro  |') 
+        print('|   RB - Rio de Janeiro até Brasília   |') 
+        print('|    SB - De São Paulo até Brasília    |')  
+        print('+--------------------------------------+') 
+        rotaObjeto = input('Digite a sigla da rota desejada: ') #Capta a escolha do usuario
+        if rotaObjeto == 'RS' or rotaObjeto == 'rs': #Sequencia de possibilidades de escrita do usuario
+            rota = 1
+            return rota
+        elif rotaObjeto == 'SR' or rotaObjeto == 'sr':
+            rota = 1
+            return rota
+        elif rotaObjeto == 'BS' or rotaObjeto == 'bs':
+            rota = 1.2
+            return rota
+        elif rotaObjeto == 'RB' or rotaObjeto == 'rb':
+            rota = 1.5
+            return rota
+        elif rotaObjeto == 'BR' or rotaObjeto == 'br':
+            rota = 1.5
+            return rota
+        elif rotaObjeto == 'SB' or rotaObjeto == 'sb':
+            rota = 1.2
+            return rota
+        else:
+            print('Rota inexistente')
+            continue
+        break
 
 def iniciarPrograma(): #Função para chamar as outras funções 
     print('Bem vindo a Campanhia de Logistica Samuel Nilton da Silva(3892265)') #Apresebtação    
